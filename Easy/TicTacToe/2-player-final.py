@@ -1,6 +1,8 @@
 ini_game = '         '
 game_matrix = []
 count = 0
+player = 'X'
+
 
 for i in range(3):
     row = []
@@ -47,7 +49,12 @@ while True:
         print('This cell is occupied! Choose another one!')
         continue
     else:
-        game_matrix[int(x) - 1][int(y) - 1] = 'X'
+        game_matrix[int(x) - 1][int(y) - 1] = player
+        if player == 'X':
+            player = 'O'
+        else:
+            player = 'X'
+
         inp = con_mat()
         print_matrix()
         x_len = len([i for i in inp if i == 'X'])
