@@ -46,3 +46,5 @@ while True:
     user_choice = input('Type "play" to play the game, "exit" to quit:')
     if user_choice == 'play':
         game()
+    else:
+        break
