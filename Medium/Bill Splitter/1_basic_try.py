@@ -12,8 +12,6 @@ else:
         friends[friends_name] = 0
     bill = float(input('\nEnter the total bill value:\n'))
     split_bill = bill / num_friends
-    if split_bill % 1 == 0:
-        split_bill = int(split_bill)
     for k in friends.keys():
         friends[k] = round(split_bill, 2)
     print(friends)
